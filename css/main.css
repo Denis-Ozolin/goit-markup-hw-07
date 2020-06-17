@@ -914,28 +914,30 @@ img {
 
 .modal-close-btn {
   position: absolute;
-  right: -9px;
-  top: -10px;
+  right: 8px;
+  top: 8px;
   width: 30px;
   height: 30px;
   overflow: hidden;
   border-radius: 50%;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-  background-image: url(../images/close.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--bgc-accent-white);
   cursor: pointer;
-  /* transition: transform 5s var(--timing-function),
-    background-color 5s var(--timing-function); */
+  -webkit-transition: fill 5s var(--timing-function);
+  transition: fill 5s var(--timing-function);
 }
 
-/* .modal-close-btn:hover,
-.modal-close-btn:focus {
-  transform: translate(-504px);
-  background-color: var(--accent-color);
-} */
+.close-btn-icon {
+  fill: #000000;
+  -webkit-transition: fill 5s var(--timing-function);
+  transition: fill 5s var(--timing-function);
+}
+
+.modal-close-btn:hover > .close-btn-icon {
+  fill: var(--accent-color);
+}
+
 .modal-heading {
   margin-bottom: 30px;
   text-align: center;
