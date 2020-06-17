@@ -1,0 +1,118 @@
+/* НАВИГАЦИЯ РАБОT СТУДИИ */
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.nav-btn > li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+
+  border-radius: 4px;
+  color: var(--secondary-text-color);
+  background-color: var(--secondary-bgc);
+  transition: background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function), color 250ms var(--timing-function);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--bgc-accent-white);
+  background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* СПИСОК РАБОТ СТУДИИ */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-item {
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  background: var(--bgc-accent-white);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.card-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.card-item:hover,
+.card-item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.thumb {
+  position: relative;
+
+  overflow: hidden;
+}
+/* 
+.card-item > img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+} */
+
+.card-description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: var(--bgc-accent-white);
+  background-color: rgba(33, 150, 243, 0.9);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+}
+
+.card-item:hover .thumb .card-description,
+.card-item:focus .thumb .card-description {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-info {
+  padding: 20px 24px;
+}
+
+.card-name {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+
+  color: var(--secondary-text-color);
+}
+
+.card-product {
+  font-size: 16px;
+  line-height: 1.9;
+}
